@@ -1,0 +1,28 @@
+void setup(){
+  
+size(1280,720);
+background(255);}
+
+void draw(){
+  strokeWeight(5);
+  stroke(200);
+  for(int x=10;x<1280;x+=160)
+  line(0,0,x,720);
+  
+  for(int x=10;x<1280;x+=160)
+  line(1280,0,x,720);
+  
+  strokeWeight(10);
+  stroke(100);
+  fill(100);
+  
+  ellipse(640,340,70,70);
+  ellipse(950,250,50,50);
+  ellipse(1100,500,50,50);
+  ellipse(1025,340,70,70);
+  ellipse(50,340,70,70);
+  ellipse(380,400,80,80);
+  ellipse(100,250,50,50);
+  ellipse(250,400,50,50);
+  ellipse(650,660,150,150);
+  }
