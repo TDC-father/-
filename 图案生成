@@ -1,0 +1,50 @@
+float[] c=new float[100];
+float[] d=new float[100];
+
+void setup(){
+
+  size(400,400);
+  background(255);
+ 
+  noStroke();
+  rect(0,0,400,400);
+  
+  for(int i=0;i<8;i++){
+  int a = int(random((40*i),(40*(i+1))));
+  Xdraw(a);
+  c[i] = float(a);
+  }
+  
+  for(int j=0;j<8;j++){
+  int b = int(random((40*j),(40*(j+1))));
+  Ydraw(b);
+  d[j]=float(b);
+  }
+  
+  for(int e=0;e<9;e=e+2){
+    for(int g =0;g<9;g=g+2){
+    noStroke();
+    fill(250,225,220);
+    rect(d[g],c[e],abs(d[g+int(random(3))]-d[g]),abs(c[e+int(random(3))]-c[e]));}}
+    
+    for(int e=0;e<9;e=e+2){
+    for(int g =0;g<9;g=g+2){
+    noStroke();
+    fill(230,225,245);
+    rect(d[g],c[e],abs(d[g+int(random(3))]-d[g]),abs(c[e+int(random(3))]-c[e]));}}
+    
+  }
+  
+void Xdraw(int posY){
+  strokeCap(SQUARE);
+  stroke(240,200,200);
+  strokeWeight(random(5));
+  line(0,posY,400,posY);
+  }
+  
+void Ydraw(int posX){
+  strokeCap(SQUARE);
+  stroke(240,200,200);
+  strokeWeight(random(5));
+  line(posX,0,posX,400);
+  }
